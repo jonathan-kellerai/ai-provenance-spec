@@ -1,0 +1,56 @@
+name: Spec amendment proposal
+description: Propose a new specification element — a new ADR, a new spec, or a constitution amendment.
+title: "[amendment] "
+labels: ["amendment-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a **new** element of the specification. A
+        constitution invariant changes only through the Amendment Rule in
+        `docs/governance/constitution.md`; see `docs/agents/conventions.md`.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What do you propose?
+      description: Describe the new element and the gap it fills.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this needed? What stays under-specified or breaks without it?
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of amendment
+      options:
+        - "New ADR"
+        - "New spec under docs/specs/"
+        - "Constitution amendment (invariant change)"
+        - "Other"
+    validations:
+      required: true
+  - type: dropdown
+    id: semver
+    attributes:
+      label: Semver impact
+      description: How does this change affect consumers of the specification?
+      options:
+        - "patch — editorial, no semantic change"
+        - "minor — adds capability, backward compatible"
+        - "major — changes or removes existing meaning"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you file
+      options:
+        - label: I searched existing ADRs and issues.
+          required: true
+        - label: A constitution amendment needs Policy, Release, and Environment Owner sign-off.
+          required: false

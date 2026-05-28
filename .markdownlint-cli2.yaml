@@ -1,0 +1,18 @@
+# markdownlint-cli2 configuration.
+#
+# Intentionally lenient: the specification documents are frozen prose and must
+# pass without rewrites. Disabled rules are the ones the existing docs trip by
+# design, not by error.
+config:
+  MD013: false   # line-length — docs use long prose lines and wide tables
+  MD024:
+    siblings_only: true  # repeated headings are expected across ADR entries
+  MD032: false   # blanks-around-lists — frozen specification prose varies
+  MD033: false   # inline HTML — permitted in the whitepaper
+  MD040: false   # fenced-code language — frozen specs omit it
+  MD041: false   # first line need not be a top-level heading
+  MD060: false   # table column style — frozen docs use wide, varied tables
+ignores:
+  - ".claude"
+  - ".claude-tmp"
+  - "node_modules"

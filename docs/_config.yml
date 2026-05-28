@@ -1,0 +1,12 @@
+# GitHub Pages (Jekyll) configuration for the published docs/ site.
+# The Pages workflow is .github/workflows/pages.yml.
+title: AI Provenance Spec
+description: >-
+  Trusted release and deployment substrate for portable cognition capsules —
+  the v1 specification.
+theme: jekyll-theme-primer
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

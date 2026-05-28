@@ -1,0 +1,12 @@
+# Lefthook git hooks. Contributors enable them once with: lefthook install
+#
+# These pre-commit checks mirror the CI gates in .github/workflows/ci.yml so
+# problems are caught locally before they reach a pull request.
+pre-commit:
+  parallel: true
+  commands:
+    opa-test:
+      glob: "docs/governance/policies/**/*.rego"
+      run: opa test docs/governance/policies/
+    sanitization:
+      run: bash scripts/check-sanitization.sh

@@ -1,0 +1,10 @@
+# CODEOWNERS — sensitive paths only. Leaf documentation stays open to PRs.
+# A change to any path below requires review from the repository owner.
+# See docs/agents/enforcement.md.
+
+/.github/          @jonathan-kellerai
+/LICENSE           @jonathan-kellerai
+/NOTICE            @jonathan-kellerai
+/AGENTS.md         @jonathan-kellerai
+/CLAUDE.md         @jonathan-kellerai
+/docs/governance/  @jonathan-kellerai

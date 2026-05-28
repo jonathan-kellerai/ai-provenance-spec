@@ -1,0 +1,8 @@
+# Links the CI link-checker (lychee) must not fail on.
+
+# Sister specification — published in the same release window; it may briefly
+# return 404 until matryoshka-spec goes live.
+https://github.com/jonathan-kellerai/matryoshka-spec
+
+# Auth-gated GitHub endpoint — cannot be reached anonymously by the checker.
+https://github.com/jonathan-kellerai/aegis-drop/security/advisories/new

@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up OPA
+        uses: open-policy-agent/setup-opa@b2b258e089860efaadaaf71bf6e3aecb4a3eeff1 # v2.4.0
+        with:
+          version: 1.16.2
+
+      - name: Validate governance policy
+        run: |
+          opa check docs/governance/policies/
+          opa test docs/governance/policies/ --verbose
+
+      - name: JSON well-formedness
+        run: |
+          shopt -s globstar nullglob
+          count=0
+          for f in **/*.json; do
+            count=$((count + 1))
+            echo "checking $f"
+            jq empty "$f"
+          done
+          echo "$count JSON file(s) checked"
+
+      - name: Markdown lint
+        uses: DavidAnson/markdownlint-cli2-action@ded1f9488f68a970bc66ea5619e13e9b52e601cd # v23.2.0
+        with:
+          globs: "**/*.md"
+
+      - name: Sanitization regression gate
+        run: bash scripts/check-sanitization.sh
+
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@8646ba30535128ac92d33dfc9133794bfdd9b411 # v2.8.0
+        with:
+          args: "--no-progress --include-fragments ."
+          fail: true

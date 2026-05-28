@@ -1,0 +1,18 @@
+# Workspace-only files — do not ship in public repo
+KICKOFF-PROMPT.md
+STAGING-NOTES.md
+NEXT-SESSION-PROMPT.md
+
+# Claude Code workspace
+.claude/
+.claude-tmp/
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Build and tool caches
+.ruff_cache/
+_site/
+.jekyll-cache/
+node_modules/

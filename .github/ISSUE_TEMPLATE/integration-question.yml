@@ -1,0 +1,32 @@
+name: Integration question
+description: Ask how to adopt, apply, or build against the AI Provenance Spec specification.
+title: "[question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to ask how to **adopt or apply** the specification — how
+        to wire it into a runtime, how a kernel object maps onto your system,
+        or how two specs compose. For spec defects, use the *Spec bug* or
+        *Spec clarification* forms instead.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you building or integrating, and which part of the spec is involved?
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you file
+      options:
+        - label: I read AGENTS.md and the relevant docs/ files.
+          required: true

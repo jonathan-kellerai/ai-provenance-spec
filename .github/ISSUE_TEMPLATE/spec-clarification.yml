@@ -1,0 +1,40 @@
+name: Spec clarification
+description: A part of the specification is ambiguous or unclear.
+title: "[clarification] "
+labels: ["clarification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when the specification is not *wrong*, but is
+        **ambiguous** — it admits more than one reasonable reading. If the text
+        is outright incorrect, use the *Spec bug* form instead.
+  - type: textarea
+    id: location
+    attributes:
+      label: Which part is unclear?
+      description: File path(s) and line number(s).
+      placeholder: "docs/..."
+    validations:
+      required: true
+  - type: textarea
+    id: readings
+    attributes:
+      label: What are the competing readings?
+      description: Describe the two or more ways the text can reasonably be understood.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Why does the ambiguity matter?
+      description: What decision or implementation choice depends on resolving it?
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you file
+      options:
+        - label: I searched existing issues for this ambiguity.
+          required: true

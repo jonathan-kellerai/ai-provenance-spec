@@ -1,0 +1,43 @@
+name: Spec bug
+description: The specification is wrong, internally inconsistent, or contradicts another document.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when a part of the specification is **wrong** — a factual
+        error, an internal contradiction, or a claim that conflicts with another
+        document in this repository. For ambiguity that is not strictly wrong,
+        use the *Spec clarification* form instead.
+  - type: textarea
+    id: location
+    attributes:
+      label: Where is the problem?
+      description: File path(s) and line number(s), e.g. `docs/governance/constitution.md:142`.
+      placeholder: "docs/..."
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Quote the text and explain the error or the contradiction.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it say instead?
+      description: If you can, propose the exact replacement text.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you file
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: This concerns the specification, not an implementation (there is none).
+          required: true

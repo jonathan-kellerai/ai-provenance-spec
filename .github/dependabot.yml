@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # This repository ships no runtime dependencies. Dependabot tracks only the
+  # versions of the GitHub Actions used by the workflows.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: chore
+      include: scope

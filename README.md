@@ -99,3 +99,7 @@ agents are expected to follow.
 This specification is published under the [Apache License 2.0](LICENSE). Copyright 2026 Jonathan A. Bowe; see [NOTICE](NOTICE).
 
 AI Provenance Spec is a **specification-stage** project. The architecture is binding; the invariants are stable. Issues that surface ambiguity or under-specification are welcome. Pull requests should target documentation language, not the meaning of an invariant. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full stance.
+
+## For agents
+
+See [AGENTS.md](AGENTS.md).

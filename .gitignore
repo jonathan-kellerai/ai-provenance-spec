@@ -16,3 +16,6 @@ NEXT-SESSION-PROMPT.md
 _site/
 .jekyll-cache/
 node_modules/
+
+# Spec-workflow & review artifacts — local-only intermediate state, never shipped
+artifacts/

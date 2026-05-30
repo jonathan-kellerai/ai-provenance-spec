@@ -1,7 +1,7 @@
 {
   "blast_radius": {
     "_schema_version": "1.0.0",
-    "_description": "Blast-radius pulse affects manifest. Each entry declares: when a file matching when_changed is in the git diff, the listed affects globs are in the blast radius, and required_actions are owed before the change is acceptable. The conformance.blast_radius Rego package consumes this file as `data.blast_radius.affects` (see docs/adr/ADR-002-blast-radius-pulse.md). Severity: error = block (CI fail / lefthook reject); warning = report only.",
+    "_description": "Blast-radius pulse affects manifest. Each entry declares: when a file matching when_changed is in the git diff, the listed affects globs are in the blast radius, and required_actions are owed before the change is acceptable. The kellerai.oss.blast_radius Rego package consumes this file as `data.blast_radius.affects` (see docs/adr/ADR-002-blast-radius-pulse.md). Severity: error = block (CI fail / lefthook reject); warning = report only.",
     "_conventions": {
       "when_changed": "Glob, repo-relative, POSIX. Range syntax allowed (e.g. 'conformance/data.json#schema.artifact_types' marks a logical key inside a JSON file; the pulse engine treats anything after '#' as a json-pointer-style sub-target the diff scanner inspects).",
       "affects": "Array of globs that must be checked / updated when when_changed fires.",

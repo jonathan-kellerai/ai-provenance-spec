@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # pulse.sh — compute the blast radius of a change set and either report or
-# block. Wraps `opa eval data.conformance.blast_radius.result` with the same
+# block. Wraps `opa eval data.kellerai.oss.blast_radius.result` with the same
 # preflight discipline as scripts/bootstrap.sh.
 #
 # Modes:
@@ -243,7 +243,7 @@ opa eval \
 	--data "$policy_dir" \
 	--input "$opa_input" \
 	--format json \
-	'data.conformance.blast_radius.result' \
+	'data.kellerai.oss.blast_radius.result' \
 	>"$opa_stdout" \
 	2>"$opa_stderr"
 opa_exit=$?

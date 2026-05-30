@@ -117,7 +117,7 @@ jobs:
             --data standard/conformance/ \
             --input repo-structure.json \
             --format json \
-            'data.conformance.conformance.violations' \
+            'data.kellerai.oss.conformance.violations' \
             > opa-eval.stdout \
             2> opa-eval.stderr
           exit_code=$?

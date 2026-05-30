@@ -9,9 +9,9 @@
 #   production; the tests vary `input` only (same convention as
 #   trust_dial_test.rego). This is what makes the suite a proof that
 #   blast_radius.rego is a pure deterministic function of (input, data).
-package conformance.blast_radius_test
+package kellerai.oss.blast_radius_test
 
-import data.conformance.blast_radius
+import data.kellerai.oss.blast_radius
 import rego.v1
 
 # ---------------------------------------------------------------------------

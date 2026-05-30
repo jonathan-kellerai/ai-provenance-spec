@@ -12,7 +12,7 @@
 #   no opa.runtime. Every input is in `input`; every threshold and relationship
 #   is in `data.blast_radius`. This is what makes `opa test` a proof of
 #   determinism.
-package conformance.blast_radius
+package kellerai.oss.blast_radius
 
 import rego.v1
 

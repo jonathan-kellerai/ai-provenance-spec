@@ -1,0 +1,3 @@
+title: "AI Provenance Spec"
+description: "Provenance specification + Rego policies for AI artifact attestation"
+theme: jekyll-theme-cayman

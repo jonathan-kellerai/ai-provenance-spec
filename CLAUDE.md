@@ -1,3 +1,5 @@
+@AGENTS.md
+
 # CLAUDE.md — Claude Code instructions for ai-provenance-spec
 
 @AGENTS.md

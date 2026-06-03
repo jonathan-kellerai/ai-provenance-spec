@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # check-publish-gate.sh — verify publish prerequisites before `gh repo create`.
 #
-# Aegis Drop's README cross-links the companion repo `matryoshka-spec`.
-# Publishing Aegis Drop while that link 404s gives every cold-landing reader
+# AI Provenance Spec's README cross-links the companion repo `grounded-rag-spec`.
+# Publishing AI Provenance Spec while that link 404s gives every cold-landing reader
 # a broken first impression. This script enforces the gate.
 #
 # Exit codes:
@@ -12,7 +12,7 @@
 
 set -euo pipefail
 
-COMPANION_URL="https://github.com/jonathan-kellerai/matryoshka-spec"
+COMPANION_URL="https://github.com/jonathan-kellerai/grounded-rag-spec"
 
 command -v curl >/dev/null || { echo "ERROR: curl not found" >&2; exit 2; }
 
@@ -26,7 +26,7 @@ case "$http_status" in
     ;;
   404)
     echo "BLOCKED: companion repo not yet live ($COMPANION_URL returns 404)"
-    echo "Publish matryoshka-spec first, then re-run this gate." >&2
+    echo "Publish grounded-rag-spec first, then re-run this gate." >&2
     exit 1
     ;;
   000)

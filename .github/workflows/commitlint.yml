@@ -15,5 +15,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Lint commit messages
-        uses: wagoid/commitlint-github-action@b948419dd99f3fd78a6548d48f94e3df7f6bf3ed # v6.2.1
+      - name: Validate pull request commit messages
+        run: |
+          npx --yes \
+            --package @commitlint/cli \
+            --package @commitlint/config-conventional \
+            commitlint \
+            --from "${{ github.event.pull_request.base.sha }}" \
+            --to "${{ github.event.pull_request.head.sha }}" \
+            --verbose

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you reference Aegis Drop, please cite it using this metadata."
-title: "Aegis Drop: Trusted Release Substrate for Portable Cognition Capsules"
+message: "If you reference AI Provenance Spec, please cite it using this metadata."
+title: "AI Provenance Spec"
 type: software
 authors:
   - family-names: Bowe
@@ -8,7 +8,7 @@ authors:
 version: "0.1.0"
 date-released: "2026-05-21"
 license: Apache-2.0
-repository-code: "https://github.com/jonathan-kellerai/aegis-drop"
+repository-code: "https://github.com/jonathan-kellerai/ai-provenance-spec"
 keywords:
   - specification
   - release-engineering

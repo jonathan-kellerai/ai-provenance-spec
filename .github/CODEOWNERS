@@ -2,9 +2,9 @@
 # A change to any path below requires review from the repository owner.
 # See docs/agents/enforcement.md.
 
-/.github/          @jonathan-kellerai
-/LICENSE           @jonathan-kellerai
-/NOTICE            @jonathan-kellerai
-/AGENTS.md         @jonathan-kellerai
-/CLAUDE.md         @jonathan-kellerai
-/docs/governance/  @jonathan-kellerai
+/.github/          @jonathan-kellerai @son-of-anton-ai
+/LICENSE           @jonathan-kellerai @son-of-anton-ai
+/NOTICE            @jonathan-kellerai @son-of-anton-ai
+/AGENTS.md         @jonathan-kellerai @son-of-anton-ai
+/CLAUDE.md         @jonathan-kellerai @son-of-anton-ai
+/docs/governance/  @jonathan-kellerai @son-of-anton-ai
